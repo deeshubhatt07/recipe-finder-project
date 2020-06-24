@@ -1,6 +1,6 @@
 import React from 'react'
 import './Controller.css'
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+//import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
 
 class Controller extends React.Component{
@@ -10,17 +10,17 @@ class Controller extends React.Component{
         this.state = {
             color: "black"
         }
-        this.clicked = this.clicked.bind(this)
+       // this.clicked = this.clicked.bind(this)
     }
 
-    clicked(){
-        if(this.state.color === "red"){
-            this.setState({color: "black"})
-        }
-        else{
-            this.setState({color: "red"})
-        }
-    }
+    // {clicked(){
+    //     if(this.state.color === "red"){
+    //         this.setState({color: "black"})
+    //     }
+    //     else{
+    //         this.setState({color: "red"})
+    //     }
+    // }}
 
     render(){
 
@@ -29,7 +29,7 @@ class Controller extends React.Component{
         return(
             <div>
                 {/* {<h3 className="container" style={{marginLeft: 15, marginRight:15, borderLeft: "25%", textAlign: "center"}}>{this.props.dish.strMeal}</h3>} */}
-                <div className="container" style={{marginLeft: 15, marginRight:15, borderLeft: "25%", textAlign: "center"}} onClick={this.clicked}>{mappers.strMeal}<span className="icon" style={{color: this.state.color}}><FavoriteBorderIcon /></span></div>
+                <div className="container" style={{marginLeft: 15, marginRight:15, borderLeft: "25%", textAlign: "center"}}>{mappers.strMeal}<span className="icon" style={{color: this.state.color}}></span></div>
                 <div className="maindisplay">
                     <img src={this.props.dish.strMealThumb} alt="icon" />
                     <div className="submain">

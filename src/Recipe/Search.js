@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.css'
-// import Display from './Display';
-// import ReactDOM from 'react-dom'
+import Display from './Display';
+import ReactDOM from 'react-dom'
 
 class Search extends React.Component{
 
@@ -11,16 +11,16 @@ class Search extends React.Component{
             dishname: ""
         }
         this.changeHandler = this.changeHandler.bind(this)
-        //this.handler = this.handler.bind(this)
+        this.handler = this.handler.bind(this)
     }
 
     changeHandler(e){
         this.setState({dishname: e.target.value})
     }
 
-    // {handler(){
-    //     ReactDOM.render(<Display key={this.state.dishname} title={this.state.dishname} />,document.getElementById('root'))
-    // }}
+    handler(){
+        ReactDOM.render(<Display key={this.state.dishname} title={this.state.dishname} />,document.getElementById('root'))
+    }
 
     render(){
 

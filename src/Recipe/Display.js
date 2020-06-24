@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Display.css'
 import Search from './Search';
 import Header from '../Header/Header';
-//import Controller from '../Controller'
+import Controller from '../Controller'
 
 class Display extends Component{
 
@@ -41,11 +41,11 @@ class Display extends Component{
                 <Header />
                 <Search />
 
-                {/* [{this.state.recipies.filter(contact => contact.strMeal.toLowerCase().includes(this.props.title.toLowerCase())).map(dish => {
+                {this.state.recipies.filter(contact => contact.strMeal.toLowerCase().includes(this.props.title.toLowerCase())).map(dish => {
                     return(
                         <Controller key={this.props.id} dish={dish} imag={this.state.recipies.strMealThumb} />
                     )
-                })}] */}
+                })}
 
                 {/* {<div style={{textAlign: "center", fontWeight:"bold", marginTop: 25}}>No Data has been received</div>} */}
             </div>

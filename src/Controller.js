@@ -16,7 +16,7 @@ class Controller extends React.Component{
                     <div className="submain">
                         <span className="headers">category of meal: </span>{this.props.dish.strCategory}<br/>
                         <span className="headers">Area of meal: </span>{this.props.dish.strArea}<br/><br/>
-                        <div className="headers" style={{textAlign: "center"}}>Ingrediantes: <br/>
+                        <div className="headers" style={{textAlign: "left"}}>Ingrediantes: <br/>
                         </div>
                         <div className="ingrads">
                             {this.props.dish.strIngredient1}{mappers.strIngredient1 === "" || mappers.strIngredient1 === " "?<span></span>:<span>---</span>}{mappers.strMeasure1}<br/>

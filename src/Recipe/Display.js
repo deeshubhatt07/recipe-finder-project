@@ -22,7 +22,6 @@ class Display extends Component{
         let that = this;
         xhr.addEventListener("readystatechange",function(){
             if(this.readyState === 4){
-                console.log(JSON.parse(this.responseText))
                 if(JSON.parse(this.responseText).meals!=null){
                     that.setState({recipies: JSON.parse(this.responseText).meals, dataFound: 1})
                 }
@@ -42,12 +41,12 @@ class Display extends Component{
         return(
             <div className="display">
                 <Header />
-                <Search />
+                <Search travel = {this.props.title}/>
 
                 {this.state.recipies.filter(contact => contact.strMeal.toLowerCase().includes(this.props.title.toLowerCase())).map(dish => {
                     x=x+1;
                     return(
-                        <Controller key={this.props.idMeal} dish={dish} imag={this.state.recipies.strMealThumb} />
+                        <Controller key={dish.idMeal} dish={dish} imag={this.state.recipies.strMealThumb} />
                     )
                 })}
 

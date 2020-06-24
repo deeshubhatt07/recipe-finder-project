@@ -28,3 +28,10 @@ p{
     background-color: gray;
     margin-right: 25%;
 }
+
+.Datalite{
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    margin-top: 15px;
+}

@@ -11,7 +11,8 @@ class Display extends Component{
         this.state = {
             dataFound: 0,
             recipies: [],
-            name: "fords"
+            name: "fords",
+            
         }
     }
 
@@ -30,11 +31,13 @@ class Display extends Component{
         xhr.open("GET","https://cors-anywhere.herokuapp.com/https://www.themealdb.com/api/json/v1/1/search.php?s=")
         xhr.setRequestHeader("Cache-Control", "no,cache");
         xhr.send(data);
-    }
 
+    
+    }
+    
 
     render(){
-        
+        let x=0;
 
         return(
             <div className="display">
@@ -42,10 +45,13 @@ class Display extends Component{
                 <Search />
 
                 {this.state.recipies.filter(contact => contact.strMeal.toLowerCase().includes(this.props.title.toLowerCase())).map(dish => {
+                    x=x+1;
                     return(
-                        <Controller key={this.props.id} dish={dish} imag={this.state.recipies.strMealThumb} />
+                        <Controller key={this.props.idMeal} dish={dish} imag={this.state.recipies.strMealThumb} />
                     )
                 })}
+
+                {x===1 ? <div></div> : <div className="Datalite">No data has been received</div>}
 
                 {/* {<div style={{textAlign: "center", fontWeight:"bold", marginTop: 25}}>No Data has been received</div>} */}
             </div>
